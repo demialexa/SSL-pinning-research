@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">OkHttp demo</string>
     <string name="button_label">push me</string>
-    <string name="url">https://github.com</string>
-    <string name="cert_error">Certificate validation failed. Is proxy enabled?</string>
     <string name="pin">sha256/7zwAM/YU+zd8BZMCl0J943URuyF35zefKC7QIoxTq+U=</string>
     <string name="hostname">github.com</string>
+    <string name="proto">https://</string>
+    <string name="text">Push the button below to send GET request to github.com via HTTPS. If everything is OK, response will be shown in toast as soon as it is received. If some exception occurs, it is shown instead.</string>
 </resources>

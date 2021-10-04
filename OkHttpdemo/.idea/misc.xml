@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/projects/security/android/ssl_pinning/OkHttpdemo/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/projects/security/solidlab/android/ssl_pinning/OkHttpdemo/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/projects/security/solidlab/android/ssl_pinning/OkHttpdemo/app/src/main/res/xml/xml.xml" value="0.1" />
       </map>

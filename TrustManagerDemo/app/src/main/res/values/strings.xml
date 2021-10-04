@@ -2,5 +2,5 @@
     <string name="app_name">TrustManager demo</string>
     <string name="button_label">push me</string>
     <string name="url">https://github.com</string>
-    <string name="cert_error">proxy is enabled =&gt; certification validation error</string>
+    <string name="text">Push the button below to send GET request to github.com via HTTPS. If everything is OK, response will be shown in toast as soon as it is received. If some exception occurs, it is shown instead.</string>
 </resources>

@@ -28,27 +28,27 @@ class MainActivity : AppCompatActivity() {
                 getString(R.string.pin)
             ).build()
 
-        val okHttpClient = OkHttpClient.Builder()
+        val client = OkHttpClient.Builder()
             .certificatePinner(certificatePinner)
             .build()
 
-        sendButton.setOnClickListener { sendRequestWrapper(okHttpClient) }
+        sendButton.setOnClickListener { sendRequestWrapper(client) }
     }
 
-    private fun sendRequestWrapper(okHttpClient: OkHttpClient) = runBlocking {
+    private fun sendRequestWrapper(client: OkHttpClient) = runBlocking {
         launch {
-            val response = withContext(Dispatchers.IO) { sendRequest(okHttpClient) }
+            val response = withContext(Dispatchers.IO) { sendRequest(client) }
             val toast = Toast.makeText(this@MainActivity, response, Toast.LENGTH_LONG)
             toast.show()
         }
     }
 
-    private fun sendRequest(okHttpClient: OkHttpClient): String? {
-        val request: Request = Request.Builder()
-            .url(getString(R.string.url))
+    private fun sendRequest(client: OkHttpClient): String? {
+        val request = Request.Builder()
+            .url(getString(R.string.proto) + getString(R.string.hostname))
             .build()
         val response = try {
-            okHttpClient.newCall(request).execute().body()?.string()
+            client.newCall(request).execute().body()?.string()
         } catch(e: Throwable) {
             e.toString()
         }
